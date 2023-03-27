@@ -12,14 +12,13 @@ n2 = int(round(float(input("Enter a number: "))))
 question = input("\nIs one of the numbers the hypotenuse of a triangle?(y/n): ")
 
 if question == "y":
-    question2 = input("\nwhich number?(1/2): ")
-    if question2 == "1":
+    if n1 > n2:
         n3 = round(math.sqrt(math.pow(n1,2) - math.pow(n2,2)), 1)
         print(f"\nmissing side = {n3}") 
-    elif question2 == "2":
+    elif n2 > n1:
         n3 = round(math.sqrt(math.pow(n2,2) - math.pow(n1,2)), 1)
         print(f"\nmissing side = {n3}")
 elif question == "n":
-    print("\nYour missing length cannot be calculated because you don't have a hypotenuse\n\n")
+    print("\nYour missing length cannot be calculated because you don't have a hypotenuse or other important information\n\n")
 else:
     print("\nLOL you can only input y or n\n\n")
